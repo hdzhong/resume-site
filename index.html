@@ -6,15 +6,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Douglas Zhong</title>
     <link rel="stylesheet" type='text/css' media="screen" href="./styles/style.css">
+    
 </head>
+<script src="scripts.js"></script> 
 <body>
     
     <div id="container--main">
 
         <section id="wrapper--hero" class="section--page">
-            <img src="./assets/images/pic.jpg"/>
+            <img id="profile-pic" src="./assets/images/profile.jpg"/>
+            <div>
+                <h1 id="user-name">Douglas Zhong</h1>
+                <p id ="bio">Software Product Engineer Intern @ Intel Corporation | Software Developer with a background in microbiology and a lover of music.</p>
+                <a href="mailto: douglaszhong@gmail.com" target="_blank" id="email">📧 douglaszhong@gmail.com </a>
+            </div>
         </section>
 
+        <section class="section--page">
+            <div id="socials--list">
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">Github</a>
+                <a href="#" target="_blank">Instagram</a>
+                <a href="./assets/resume.pdf" target="_blank">Resume</a>
+            </div>
+        </section>
+        
+        <section class="section--page">
+            <h2>Education</h2>
+            <h3>University of British Columbia</h1>
+            <ul id="skills">
+                <li>BCS in Computer Science, expected completion May 2024</li>
+                <li>BSc in Microbiology and Immunology, 2016 - 2021</li>
+            </ul>
+        </section>
+
+        <section class="section--page cond_reveal">
+            <h2>Tech Stack</h2>
+
+            <div id="wrapper--techstack__items">
+                <div class="card--techstack">
+                    <span>Python, Java, C/C++</span>
+                </div>
+
+                <div class="card--techstack">
+                    <span>Github, Gitlab</span>
+                </div>
+
+                <div class="card--techstack">
+                    <span>Bash, Linux</span>
+                </div>
+
+                <div class="card--techstack">
+                    <span>HTML, CSS, JavaScript, React</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="work-history-wrapper" class="section--page">
+            <h2>Work History</h2>
+            <div class="line-break"></div>
+            <div class="card--work-history reveal">
+                <strong>Software Product Engineer Intern | Intel Corporation</strong>
+                <p>May 2022 - Present</p>
+                <p>Improve and maintain cutting edge software video encoders</p>
+                <ul>
+                    <li>Create and maintain script to automate product-based transcoding workflows and pipelines</li>
+                    <li>Maintain open source products in an agile development process</li>
+                    <li>Benchmark and validate the performance of multiple products on several platforms</li>
+                    <li>Performed detailed analysis on video quality to improve encoder performance</li>
+                </ul>
+            </div>
+
+            <div class="line-break"></div>
+            <div class="card--work-history reveal">
+                <strong>Private Piano Teacher | Self-employed </strong>
+                <p>Sept 2015 - Present</p>
+                <p>Trained over a dozen skilled piano performers</p>
+                <ul>
+                    <li>Taught the RCM piano curriculum up to Level 10</li>
+                    <li>Developed well-rounded lesson plans together with the student and their family</li>
+                    <li>Engaged students in discussions on musical selection and composer histories</li>
+                </ul>
+            </div>
+
+            <div class="line-break"></div>
+            <div class="card--work-history reveal">
+                <strong>Software Product Engineer Intern | Intel Corporation</strong>
+                <p>May 2022 - Present</p>
+                <p>Stuff I did at Intel</p>
+                <ul>
+                    <li>Stuff</li>
+                    <li>Stuff</li>
+                    <li>Stuff</li>
+                    <li>Stuff</li>
+                </ul>
+            </div>
+
+            <div class="line-break"></div>
+            <div class="card--work-history reveal">
+                <strong>Software Product Engineer Intern | Intel Corporation</strong>
+                <p>May 2022 - Present</p>
+                <p>Stuff I did at Intel</p>
+                <ul>
+                    <li>Stuff</li>
+                    <li>Stuff</li>
+                    <li>Stuff</li>
+                    <li>Stuff</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section--page reveal">
+            <h2>Projects & Accomplishments</h2>
+        
+            <div class="card--project">
+                <a href="project.html"><span>🏆 </span>REDCap for Biraj</a>
+            </div>
+        
+            <div class="card--project">
+                <a href="project.html" ><span>🏆 </span>Bioinformatics project</a>
+            </div>
+        
+            <div class="card--project">
+                <a href="project.html" ><span>🏆 </span>Flashcards!</a>
+            </div>
+
+        </section>
+        
     </div>
 </body>
 </html>
