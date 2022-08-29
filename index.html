@@ -6,27 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Douglas Zhong</title>
     <link rel="stylesheet" type='text/css' media="screen" href="./styles/style.css">
-    
+    <script src="scripts.js"></script> 
 </head>
-<script src="scripts.js"></script> 
+
 <body>
     
     <div id="container--main">
 
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+          </label>
+          <p>Enable Dark Mode</p>
+        </div>
+
         <section id="wrapper--hero" class="section--page">
-            <img id="profile-pic" src="./assets/images/profile.jpg"/>
+            <img id="profile-pic" src="./assets/images/profile.png"/>
             <div>
                 <h1 id="user-name">Douglas Zhong</h1>
-                <p id ="bio">Software Product Engineer Intern @ Intel Corporation | Software Developer with a background in microbiology and a lover of music.</p>
+                <p id ="bio">Software Product Engineer Intern @ Intel Corporation | Computer guy with a background in life sciences and a lover of music.</p>
                 <a href="mailto: douglaszhong@gmail.com" target="_blank" id="email">📧 douglaszhong@gmail.com </a>
             </div>
         </section>
 
+
         <section class="section--page">
             <div id="socials--list">
-                <a href="#" target="_blank">LinkedIn</a>
-                <a href="#" target="_blank">Github</a>
-                <a href="#" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com/in/douglas-zhong/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/hdzhong" target="_blank">Github</a>
+                <a href="https://www.instagram.com/douglas.zhong/" target="_blank">Instagram</a>
                 <a href="./assets/resume.pdf" target="_blank">Resume</a>
             </div>
         </section>
@@ -37,6 +46,10 @@
             <ul id="skills">
                 <li>BCS in Computer Science, expected completion May 2024</li>
                 <li>BSc in Microbiology and Immunology, 2016 - 2021</li>
+            </ul>
+            <h3>Coursera</h3>
+            <ul id="skills">
+                <li>Google Data Analytics Professional Certificate, completed June 2021</li>
             </ul>
         </section>
 
@@ -53,11 +66,15 @@
                 </div>
 
                 <div class="card--techstack">
-                    <span>Bash, Linux</span>
+                    <span>Bash, Ubuntu</span>
                 </div>
 
                 <div class="card--techstack">
                     <span>HTML, CSS, JavaScript</span>
+                </div>
+
+                <div class="card--techstack">
+                    <span>SQL, R, Tableau</span>
                 </div>
 
             </div>
@@ -67,7 +84,7 @@
             <h2>Work History</h2>
             <div class="line-break"></div>
             <div class="card--work-history reveal">
-                <strong>🎥 Software Product Engineer Intern | Intel Corporation</strong>
+                <strong>🎥 Software Product Engineer Intern | <a href="http://intel.ca" target="_blank">Intel Corporation</a> </strong>
                 <p>May 2022 - Present</p>
                 <p>Improve and maintain cutting edge software video encoders</p>
                 <ul>
@@ -84,7 +101,7 @@
                 <p>Sept 2015 - Present</p>
                 <p>Trained over a dozen skilled piano performers</p>
                 <ul>
-                    <li>Taught the RCM piano curriculum up to Level 10</li>
+                    <li>Taught the <a href="https://www.rcmusic.com/"" target="_blank">RCM</a> piano curriculum up to Level 10</li>
                     <li>Developed well-rounded lesson plans together with the student and their family</li>
                     <li>Engaged students in discussions on musical selection and composer histories</li>
                 </ul>
@@ -92,7 +109,7 @@
 
             <div class="line-break"></div>
             <div class="card--work-history reveal">
-                <strong>📋 Clinical Research Assistant | Providence Health Care</strong>
+                <strong>📋 Clinical Research Assistant | <a href="http://bcfootandankle.com/research/staff/"" target="_blank">BC Foot and Ankle</a></strong>
                 <p>May 2020 - Dec 2020</p>
                 <p>Managed 3+ orthopaedic studies to help improve the treatment of foot and ankle diseases</p>
                 <ul>
@@ -104,7 +121,7 @@
 
             <div class="line-break"></div>
             <div class="card--work-history reveal">
-                <strong>🔬 Student Research Assistant | SignalChem Biotech Inc. </strong>
+                <strong>🔬 Student Research Assistant |<a href="https://signalchemlifesciences.com/" target="_blank"> SignalChem Biotech Inc. </a></strong>
                 <p>Jan 2019 - Sep 2019</p>
                 <p>Produced 10+ custom proteins for clients</p>
                 <ul>
@@ -112,6 +129,40 @@
                     <li>Successfully implemented and optimized the cloning workflow for creating custom proteins</li>
                 </ul>
             </div>
+        </section>
+
+        <section id="volunteer-wrapper" class="section--page">
+            <h2>Volunteer Experience</h2>
+            <div class="line-break"></div>
+            <div class="card--work-history reveal">
+                <strong>📊 Volunteer/Organizer | Data for Good Vancouver</strong>
+                <p>May 2021 - Feb 2022</p>
+                <ul>
+                    <li>Helped organize a datathon for Brightside Homes to improve social housing</li>
+                    <li>Cleaned and transformed survey data for future analytical purposes</li>
+                </ul>
+            </div>
+
+            <div class="line-break"></div>
+            <div class="card--work-history reveal">
+                <strong>🏢 Human Resources Staff Member | Anime Revolution Inc. </strong>
+                <p>Mar 2017 - Jun 2021</p>
+                <ul>
+                    <li>Planned and organized many of the logistical and practical details for the 3-day convention over several months with a dedicated team of directors, staff, and volunteers</li>
+                    <li>Organized and scheduled shifts for 100+ staff and volunteers across several departments to make sure that the convention runs effectively and smoothly</li>
+                </ul>
+            </div>
+
+            <div class="line-break"></div>
+            <div class="card--work-history reveal">
+                <strong>🎓 Senior Orientation Leader | University of British Columbia</strong>
+                <p>Dec 2017 - Dec 2018</p>
+                <ul>
+                    <li>Successfully planned and executed Imagine Day (UBC’s orientation day) with a team of dedicated leaders for almost 2000 new UBC students</li>
+                    <li>Trained and help develop a team of Orientation Leaders using various leadership and mentoring techniques and through giving feedback on online assignments</li>
+                </ul>
+            </div>
+
         </section>
 
         <section class="section--page reveal">
