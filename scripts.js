@@ -18,23 +18,30 @@ function reveal() {
   
 window.addEventListener("scroll", reveal);
 
-// Toggle for dark mode
+
+// Adds dark mode toggle functionality
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
-// If user prefers dark mode, use dark mode
-var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+function switchTheme(e) {
+  if (e.target.checked) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+  }
+  else {        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+  }    
+}
 
-if (storedTheme)
-    document.documentElement.setAttribute('data-theme', storedTheme)
+toggleSwitch.addEventListener('change', switchTheme, false);
 
-toggleSwitch.onclick = function() {
-    var currentTheme = document.documentElement.getAttribute("data-theme");
-    var targetTheme = "light";
+// Saves user preferences 
+const currentTheme = localStorage.getItem('theme');
 
-    if (currentTheme === "light") {
-        targetTheme = "dark";
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+  
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
     }
+}
 
-    document.documentElement.setAttribute('data-theme', targetTheme)
-    localStorage.setItem('theme', targetTheme);
-};

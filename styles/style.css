@@ -285,19 +285,19 @@ input:checked + .slider:before {
 .theme-switch .labels::after {
     content: attr(data-off);
     position: absolute;
-    right: 5px;
+    right: 7px;
     color: #4d4d4d;
     opacity: 1;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .theme-switch .labels::before {
     content: attr(data-on);
     position: absolute;
-    left: 5px;
+    left: 7px;
     color: #ffffff;
     opacity: 0;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .theme-switch input:checked~.labels::after {
