@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
 
+/* Main styling */
 :root{
     --mainTextColor:#000;
     --secondaryTextColor:rgb(51 51 51);
     --mainLinkColor:#0da2b8;
     --mainBorderColor:rgb(218, 218, 218);
     --mainBgColor:rgb(249, 250, 251);
+    --hoverColor:#CBCBCB
 }
 
 html[data-theme='dark'] {
@@ -14,6 +16,7 @@ html[data-theme='dark'] {
     --mainLinkColor:rgb(30, 190, 214);
     --mainBorderColor:#2b3031;
     --mainBgColor:#131415;
+    --hoverColor:#2b3031
 }
 
 html[data-theme='light'] {
@@ -22,8 +25,8 @@ html[data-theme='light'] {
     --mainLinkColor:#0da2b8;
     --mainBorderColor:rgb(218, 218, 218);
     --mainBgColor:rgb(249, 250, 251);
+    --hoverColor:#CBCBCB
 }
-
 
 
 *{
@@ -54,7 +57,7 @@ li{
 }
 
 #container--main{
-    max-width: 800px;
+    max-width: 810px;
     margin: 0 auto;
 }
 
@@ -111,10 +114,6 @@ li{
     color: var(--mainLinkColor);
 }
 
-#skills{
-
-}
-
 #wrapper--techstack__items{
     display: flex;
     flex-wrap: wrap;
@@ -131,7 +130,7 @@ li{
 }
 
 .card--techstack:hover{
-    background-color:#2b3031;
+    background-color: var(--hoverColor);
 }
 
 .card--work-history{
@@ -161,7 +160,7 @@ li{
     color: var(--mainLinkColor)
 }
 
-/* Responsiveness */
+/* Adjust for mobile */
 
 @media(max-width:600px) {
     #wrapper--hero{
@@ -196,6 +195,7 @@ li{
     }
 }
 
+/* Slow reveal of contents while scrolling */
 .reveal{
     position: relative;
     transform: translateY(25px);
@@ -207,30 +207,33 @@ li{
     opacity: 1;
   }
 
-  /* Dark mode toggle */
+/* Dark mode toggle */
 
-  .theme-switch-wrapper {
+.theme-switch-wrapper {
     display: flex;
     align-items: center;
+    transform: scale(0.8);
+    transform-origin: left;
+}
 
-  }
-
-  .theme-switch-wrapper p {
+.theme-switch-wrapper p {
     margin-left: 10px;
     font-size: 1rem;
-  }
-  .theme-switch {
+}
+.theme-switch {
     display: inline-block;
     height: 34px;
     position: relative;
-    width: 60px;
-  }
-  
-  .theme-switch input {
+    width: 70px;
+}
+
+.theme-switch input {
     display:none;
-  }
-  
-  .slider {
+}
+
+/* Slider styling */
+
+.slider {
     background-color: #ccc;
     bottom: 0;
     cursor: pointer;
@@ -239,9 +242,9 @@ li{
     right: 0;
     top: 0;
     transition: .4s;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     background-color: #fff;
     bottom: 4px;
     content: "";
@@ -250,20 +253,57 @@ li{
     position: absolute;
     transition: .4s;
     width: 26px;
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked + .slider {
     background-color: #66bb6a;
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(26px);
-  }
-  
-  .slider.round {
+}
+
+input:checked + .slider:before {
+    transform: translateX(36px);
+}
+
+.slider.round {
     border-radius: 34px;
-  }
-  
-  .slider.round:before {
+}
+
+.slider.round:before {
     border-radius: 50%;
-  }
+}
+
+/* Slider labels */
+.theme-switch .labels {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.theme-switch .labels::after {
+    content: attr(data-off);
+    position: absolute;
+    right: 5px;
+    color: #4d4d4d;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+}
+
+.theme-switch .labels::before {
+    content: attr(data-on);
+    position: absolute;
+    left: 5px;
+    color: #ffffff;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.theme-switch input:checked~.labels::after {
+    opacity: 0;
+}
+
+.theme-switch input:checked~.labels::before {
+    opacity: 1;
+}

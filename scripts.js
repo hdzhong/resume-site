@@ -1,3 +1,5 @@
+// Reveals content as the user scrolls 
+
 function reveal() {
     var reveals = document.querySelectorAll(".reveal, .cond_reveal");
   
@@ -13,24 +15,26 @@ function reveal() {
       }
     }
   }
-  window.addEventListener("scroll", reveal);
+  
+window.addEventListener("scroll", reveal);
 
-  
-  var toggle = document.getElementsByClassName("theme-switch");
+// Toggle for dark mode
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
-  var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-  if (storedTheme)
-      document.documentElement.setAttribute('data-theme', storedTheme)
-  
-  
-  toggle.onclick = function() {
-      var currentTheme = document.documentElement.getAttribute("data-theme");
-      var targetTheme = "light";
-  
-      if (currentTheme === "light") {
-          targetTheme = "dark";
-      }
-  
-      document.documentElement.setAttribute('data-theme', targetTheme)
-      localStorage.setItem('theme', targetTheme);
-  };
+// If user prefers dark mode, use dark mode
+var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+if (storedTheme)
+    document.documentElement.setAttribute('data-theme', storedTheme)
+
+toggleSwitch.onclick = function() {
+    var currentTheme = document.documentElement.getAttribute("data-theme");
+    var targetTheme = "light";
+
+    if (currentTheme === "light") {
+        targetTheme = "dark";
+    }
+
+    document.documentElement.setAttribute('data-theme', targetTheme)
+    localStorage.setItem('theme', targetTheme);
+};
